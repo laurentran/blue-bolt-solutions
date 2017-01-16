@@ -2,7 +2,7 @@ import csv
 import HTMLParser
 import re
 
-inFile = open('vw_ContentAggregation_ASSHWebIndex_ClinicalArticles.csv', "rb")
+inFile = open('test.csv', "rb")
 reader = csv.DictReader(inFile)
 outFile = open('sample_out3.csv', "wb")
 writer = csv.writer(outFile)
