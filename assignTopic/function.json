@@ -1,0 +1,30 @@
+{
+  "bindings": [
+    {
+      "name": "myBlob",
+      "type": "blobTrigger",
+      "direction": "in",
+      "path": "input/{blobname}",
+      "connection": "AzureWebJobsDashboard"
+    },
+    {
+      "type": "documentDB",
+      "name": "outputDocument",
+      "databaseName": "outDatabase",
+      "collectionName": "Items",
+      "createIfNotExists": true,
+      "connection": "bluebolt_DOCUMENTDB",
+      "direction": "out"
+    },
+    {
+      "type": "table",
+      "name": "inputTable",
+      "tableName": "inTable",
+      "connection": "function06dfd590a0ac_STORAGE",
+      "direction": "in",
+      "take": 50,
+      "partitionKey": "topics"
+    }
+  ],
+  "disabled": false
+}
